@@ -27,8 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   goToAdminPanel() {
-    this.router.navigateByUrl('/admin/panel');
- /*   const userInput: LoginDto = new LoginDto({
+    const userInput: LoginDto = new LoginDto({
       email: this.loginFg.value['email'],
       password: this.loginFg.value['password'],
     });
@@ -38,7 +37,7 @@ export class LoginComponent implements OnInit {
     }
     else {
       this.warningAlert = true;
-    }*/
+    }
   }
 
   hasAccess(userInput: LoginDto):boolean{

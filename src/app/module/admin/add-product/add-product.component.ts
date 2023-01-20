@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AddProductService} from "./add-product-service";
 import {ProductDto} from "../../../dto/product-dto";
 
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -33,6 +34,8 @@ export class AddProductComponent implements OnInit {
     })
     this.addProductService.saveProduct(productDto)
       .subscribe(e=>{
+        this.productFg.reset();
+        location.reload();
         //console.log(e);
       });
   }

@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BrowserModule} from "@angular/platform-browser";
 import {AddProductService} from "./add-product/add-product-service";
 import {MatDialogModule} from '@angular/material/dialog';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 
@@ -26,6 +27,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     BrowserModule,
     AdminRoutingModule,
     MatDialogModule,
+    BrowserAnimationsModule
 
   ],
   providers:[AdminPanelService,AddProductService]

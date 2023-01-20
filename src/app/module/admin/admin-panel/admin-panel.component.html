@@ -5,6 +5,9 @@
         <div class="col-md-3">
           <button type="button" class="btn btn-lg btn-success me-2" (click)="openDialog()">Add a Product</button>
         </div>
+        <div class="col-md-3">
+          <button class="btn btn-info" (click)="navigateToLogin()">login page</button>
+        </div>
       </div>
       <div class="row">
         <div class="card">
@@ -17,8 +20,8 @@
                   <div class="col">{{product.price}}</div>
                   <div class="col">{{product.brand}}</div>
                   <div class="col">
-                    <button type="button" class="btn btn-success me-2"(click)="onEdit()">Edit</button>
-                    <button type="button" class="btn btn-danger ms-2" (click)="onDelete()">Delete</button>
+                    <button type="button" class="btn btn-success me-2"(click)="onEdit(product)">Edit</button>
+                    <button type="button" class="btn btn-danger ms-2" (click)="onDelete(product.id)">Delete</button>
                   </div>
                 </div>
               </div>
