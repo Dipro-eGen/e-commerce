@@ -1,1 +1,56 @@
-<p>admin-panel works!</p>
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-md-12">
+      <div class="row mb-5">
+        <div class="col-md-3">
+          <button type="button" class="btn btn-lg btn-success me-2" (click)="openDialog()">Add a Product</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="card">
+          <div class="col-md-12">
+            <div *ngFor="let product of productList">
+              <div class=" my-3">
+                <div class="row">
+                  <div class="col">{{product.imageUrl}}</div>
+                  <div class="col">{{product.productName}}</div>
+                  <div class="col">{{product.price}}</div>
+                  <div class="col">{{product.brand}}</div>
+                  <div class="col">
+                    <button type="button" class="btn btn-success me-2"(click)="onEdit()">Edit</button>
+                    <button type="button" class="btn btn-danger ms-2" (click)="onDelete()">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<div class="table table-primary table-responsive table-bordered">
+  <tr>
+    <th>sl</th>
+    <th>Image</th>
+    <th>Product name</th>
+    <th>Price</th>
+    <th>Brand</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let product of productList">
+    <td></td>
+    <td>{{product.imageUrl}}</td>
+    <td>{{product.productName}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.brand}}</td>
+    <td>
+      <button type="button" class="btn btn-success me-2">Edit</button>
+      <button type="button" class="btn btn-danger ms-2">Delete</button>
+    </td>
+  </tr>
+</div>-->

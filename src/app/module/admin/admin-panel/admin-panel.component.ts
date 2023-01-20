@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {AdminPanelService} from "./admin-panel-service";
+import {ProductDto} from "../../../dto/product-dto";
+import {MatDialog} from "@angular/material/dialog";
+
+
+
 
 @Component({
   selector: 'app-admin-panel',
@@ -7,9 +13,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminPanelComponent implements OnInit {
 
-  constructor() { }
+  productList: Array<ProductDto>;
+
+  constructor(private adminPanelService:AdminPanelService,
+              public dialog: MatDialog ) { }
 
   ngOnInit(): void {
+    this.getProductList();
   }
 
+  getProductList(){
+    this.adminPanelService.getAllProducts()
+      .subscribe((res:Array<ProductDto>)=>{
+       this.productList = [...res];
+      })
+  }
+
+  onEdit() {
+
+  }
+
+  onDelete() {
+
+  }
+
+  openDialog() {
+
+  }
 }

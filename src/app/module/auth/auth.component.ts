@@ -2,10 +2,10 @@ import {Component} from '@angular/core';
 
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-auth',
   template: `<router-outlet></router-outlet>`,
 })
-export class LoginComponent {
+export class AuthComponent {
 
   constructor() {
 

@@ -1,18 +1,22 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {AdminComponent} from "./admin.component";
+import {GeneralUserComponent} from "./general-user.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+import {ProductDetailComponent} from "./product-detail/product-detail.component";
 
 
 const routes: Routes = [{
-  path: '',
-  component: AdminComponent,
+  path: 'user',
+  component: GeneralUserComponent,
   children: [
- /*   {
-      path: 'employee-setup',
-      component: EmployeeSetupComponent,
-      canActivate: [AuthRoleGuard],
-      data: {roles: ['employee-setup']}
-    },*/
+    {
+      path: 'dashboard',
+      component: DashboardComponent,
+     },
+    {
+      path: 'product-details',
+      component: ProductDetailComponent,
+    },
 
   ],
 }];
@@ -21,5 +25,5 @@ const routes: Routes = [{
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AdminRoutingModule {
+export class GeneralUserRoutingModule {
 }

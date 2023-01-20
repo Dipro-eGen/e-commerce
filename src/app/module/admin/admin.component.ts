@@ -1,21 +1,14 @@
 import {Component} from '@angular/core';
-import {ReactiveFormConfig} from "@rxweb/reactive-form-validators";
+
 
 @Component({
-  selector: 'app-ehr',
+  selector: 'app-admin',
   template: `<router-outlet></router-outlet>`,
 })
-export class EhrComponent {
+export class AdminComponent {
 
   constructor() {
-    ReactiveFormConfig.set({
-      validationMessage: {
-        required: 'This field is required.',
-        minLenght: 'Enter minimum length of {{0}} characters.',
-        compare: 'The value should be matched with {{0}}.',
-        alpha: 'You can only enter alphabets.'
-      }
-    });
+
   }
 
 }

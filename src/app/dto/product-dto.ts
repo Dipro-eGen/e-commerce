@@ -1,16 +1,26 @@
 import {prop} from "@rxweb/reactive-form-validators";
 
-export class LoginDto{
+export class ProductDto{
 
   @prop()
-  email: string;
+  id: string;
 
   @prop()
-  password: string;
+  productName: string;
 
+  @prop()
+  imageUrl: string;
 
+  @prop()
+  price: number;
 
-  public constructor(o?: Partial<LoginDto>) {
+  @prop()
+  brand: string;
+
+  @prop()
+  description: string;
+
+  public constructor(o?: Partial<ProductDto>) {
     Object.assign(this, o);
   }
 

@@ -1,27 +1,36 @@
-{"products": [
-  {
-    "id": 1,
-    "productName": "Product 1",
-    "imageUrl": "/img/product",
-    "price": 500,
-    "brand": "apple",
-    "description": "this is a product"
-  },
-  {
-    "id": 2,
-    "productName": "Product 2",
-    "imageUrl": "/img/product",
-    "price": 500,
-    "brand": "apple",
-    "description": "this is a product"
-  },
-  {
-    "id": 3,
-    "productName": "Product 3",
-    "imageUrl": "/img/product",
-    "price": 500,
-    "brand": "apple",
-    "description": "this is a product"
-  }
-]
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Product 1",
+      "imageUrl": "/img/product",
+      "price": 500,
+      "brand": "apple",
+      "description": "this is a product"
+    },
+    {
+      "id": 2,
+      "productName": "Product 2",
+      "imageUrl": "/img/product",
+      "price": 500,
+      "brand": "apple",
+      "description": "this is a product"
+    },
+    {
+      "id": 3,
+      "productName": "Product 3",
+      "imageUrl": "/img/product",
+      "price": 500,
+      "brand": "apple",
+      "description": "this is a product"
+    },
+    {
+      "productName": "fjvbdf",
+      "imageUrl": "fdfgvdf",
+      "price": "4444",
+      "brand": "fdbb",
+      "description": "fgbtfbr",
+      "id": 4
+    }
+  ]
 }

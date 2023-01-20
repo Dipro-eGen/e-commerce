@@ -4,13 +4,14 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
 @Injectable({providedIn:"root"})
-export class AdminPanelService {
+
+export class AddProductService {
 
   constructor(private http: HttpClient) {}
 
-  getAllProducts(): Observable<Array<ProductDto>> {
+  saveProduct(productDto: ProductDto): Observable<Object> {
     // @ts-ignore
-    return this.http.get('http://localhost:3000/products');
+    return this.http.post('http://localhost:3000/products',productDto);
   }
 
 

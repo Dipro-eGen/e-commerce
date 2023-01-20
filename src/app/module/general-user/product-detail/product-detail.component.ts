@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {AdminPanelService} from "../../admin/admin-panel/admin-panel-service";
+import {ProductDto} from "../../../dto/product-dto";
 
 @Component({
   selector: 'app-product-detail',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductDetailComponent implements OnInit {
 
-  constructor() { }
+  productId: string;
+  product: ProductDto;
+  constructor(private route: ActivatedRoute,
+              private adminPanelService:AdminPanelService) { }
 
   ngOnInit(): void {
+    this.productId = this.route.snapshot.queryParams["id"];
+    this.getProduct(this.productId)
+
+  }
+
+  getProduct(id: string){
+    this.adminPanelService.getProductById(id)
+      .subscribe(e=>{
+        this.product = e;
+      })
   }
 
 }
